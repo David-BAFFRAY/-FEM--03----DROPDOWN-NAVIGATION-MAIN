@@ -1,8 +1,14 @@
 {
-  "dependencies": {
+  
+  "devDependencies": {
     "@parcel/transformer-sass": "^2.7.0",
     "parcel": "^2.7.0",
-    "reset-css": "^5.0.1",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-bundle-manifest": "^0.2.0",
     "sass": "^1.55.0"
-  }
+  },
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build --no-source-maps index.html"
+    }
 }
