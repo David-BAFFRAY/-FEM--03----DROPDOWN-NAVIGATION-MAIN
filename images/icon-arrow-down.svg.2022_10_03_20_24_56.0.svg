@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="16"
-   height="11"
+   width="10"
+   height="6"
    version="1.1"
    id="svg4"
    sodipodi:docname="icon-arrow-down.svg"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -20,21 +19,21 @@
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     showgrid="false"
-     width="11px"
-     inkscape:zoom="26.45"
-     inkscape:cx="4.4045369"
-     inkscape:cy="2.7032136"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="1072"
-     inkscape:window-y="92"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg4" />
+     showgrid="true"
+     objecttolerance="10"
+     guidetolerance="10">
+    <inkscape:grid
+       type="xygrid"
+       id="grid10"
+       empspacing="10" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid12" />
+  </sodipodi:namedview>
   <path
      stroke="#686868"
-     stroke-width="1.5"
+     stroke-width="1.53271"
      fill="none"
-     d="m 3.873346,3.3440453 4,4 4,-4"
+     d="M 1.5227493,0.01578301 5.7578126,3.9603249 9.9928757,0.01578301"
      id="path2" />
 </svg>

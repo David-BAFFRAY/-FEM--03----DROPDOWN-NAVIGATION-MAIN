@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0",
+    "reset-css": "^5.0.1",
+    "sass": "^1.55.0"
+  }
+}

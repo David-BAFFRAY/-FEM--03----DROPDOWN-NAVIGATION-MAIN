@@ -1,0 +1,1177 @@
+@include devices(mobile) {
+  body {
+    display: grid;
+    height: auto;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh auto 10vh; 
+    grid-template-areas: 
+    "header"
+    "section"
+    "footer";
+    overflow-x: hidden;
+    transition: all .3s ease;
+
+    &.on {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  
+    header {
+      grid-area: header;
+    }
+    
+    main > section {
+      grid-area: section;
+    }
+    
+    footer {
+      grid-area: footer;
+    }
+  }
+
+  header {
+  
+    .nav__mobile {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      svg {
+        margin: 1.5em 0 0 1em;
+      }
+
+      .btn__burger {
+        margin-right: 1.5em;
+        z-index: 10;
+
+        .hide {
+          display: none;
+          opacity: 0;
+          visibility: hidden;
+          width: 0;
+          height: 0;
+          overflow: hidden;
+        }
+      }
+    }
+      
+    nav {
+      
+      .sidebar {
+        position: absolute;
+        top: 0;
+        left: 100vw;
+        width: 70%;
+        height: 100%;
+        padding: 5em 0 0 1em;
+        background: whitesmoke;
+        transition: all .5s ease;
+
+        &.close {
+          left: 7em;
+        }
+
+        .nav-links {
+
+          li {
+            margin-bottom: 2em;
+
+            svg:nth-child(2) {
+              margin: 0 0 0 .5em;
+              padding: .2em .5em;
+              translate: all .3s ease;
+            }
+
+            &.showMenu svg.arrow {
+              margin: 0 0 0 .5em;
+              padding: .2em .5em;
+              transform: rotate(180deg);
+            }
+          }
+
+          a {
+            text-decoration: none;
+            color: gray;
+            font-family: Epilogue;
+          }
+
+          li .sub-menu {
+            display: none;
+            padding: 1em 0 1em 3em;
+
+            li {
+              margin-bottom: 1em;
+
+              svg {
+                padding-right: 1em;
+              }
+
+              a {
+                font-family: Epilogue;
+                color: gray;
+              }
+            }
+          }
+
+          li.showMenu .sub-menu {
+            display: block;
+          }
+        }
+
+        .group__button {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          button {
+            width: 50vw;
+            height: 5vh;
+            font-family: Epilogue;
+            border: 2px solid black;
+            border-radius: 10px;
+
+            &:nth-child(1) {
+              border: none;
+            }
+          }
+        }
+
+        .link_name {
+          color: #808080;
+          font-family: Epilogue;
+        }
+      }
+    }
+  }
+
+  section {
+
+    .img {
+      width: 100vw;
+      height: 45vh;
+      background-image: url(../images/image-hero-mobile.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  
+    article { 
+    
+      h1 {
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: 2.2em;
+        text-align: center;
+        margin: 1em 0 .5em 0;
+      }
+    
+      p {
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: center;
+        padding: 0 .2em;
+        color: gray;
+      }
+    
+      button {
+        display: block;
+        width: 45%;
+        height: 3.2em;
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: 1.3em;
+        padding: 0 .5em;
+        border-radius: 20px;
+        color: white;
+        background-color: black;
+        margin: 1.5em auto;
+      }
+
+      .link--client {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+  }
+
+  footer {
+    margin: auto;
+  
+    .attribution {
+      font-family: Epilogue;
+      margin: 1em .3em;
+      line-height: 1.3em;
+      text-align: center;
+    }
+  
+    .attribution > a {
+      color: green;
+      text-decoration: none;
+    }
+  }
+}
+
+@include devices(mobile-landscape) {
+  body {
+    display: grid;
+    height: auto;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh auto 10vh; 
+    grid-template-areas: 
+    "header"
+    "section"
+    "footer";
+    overflow-x: hidden;
+    transition: all .3s ease;
+
+    &.on {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  
+    header {
+      grid-area: header;
+    }
+    
+    main > section {
+      grid-area: section;
+    }
+    
+    footer {
+      grid-area: footer;
+    }
+  }
+
+  header {
+  
+    .nav__mobile {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      svg {
+        margin: 1.5em 0 0 1em;
+      }
+
+      .btn__burger {
+        margin-right: 1.5em;
+        z-index: 10;
+
+        .hide {
+          display: none;
+          opacity: 0;
+          visibility: hidden;
+          width: 0;
+          height: 0;
+          overflow: hidden;
+        }
+      }
+    }
+      
+    nav {
+      
+      .sidebar {
+        position: absolute;
+        top: 0;
+        left: 100vw;
+        width: 50%;
+        height: 70vw;
+        padding: 5em 0 0 1em;
+        background: whitesmoke;
+        transition: all .5s ease;
+
+        &.close {
+          left: 25em;
+        }
+
+        .nav-links {
+
+          li {
+            margin-bottom: 2em;
+
+            svg:nth-child(2) {
+              margin: 0 0 0 .5em;
+              padding: .2em .5em;
+              translate: all .3s ease;
+            }
+
+            &.showMenu svg.arrow {
+              margin: 0 0 0 .5em;
+              padding: .2em .5em;
+              transform: rotate(180deg);
+            }
+          }
+
+          a {
+            text-decoration: none;
+            color: gray;
+            font-family: Epilogue;
+          }
+
+          li .sub-menu {
+            display: none;
+            padding: 1em 0 1em 3em;
+
+            li {
+              margin-bottom: .5em;
+
+              svg {
+                padding-right: 1em;
+              }
+
+              a {
+                font-family: Epilogue;
+                color: gray;
+              }
+            }
+          }
+
+          li.showMenu .sub-menu {
+            display: block;
+          }
+        }
+
+        .group__button {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          button {
+            width: 20vw;
+            height: 15vh;
+            font-family: Epilogue;
+            border: 2px solid black;
+            border-radius: 10px;
+
+            &:nth-child(1) {
+              border: none;
+            }
+          }
+        }
+
+        .link_name {
+          color: #808080;
+          font-family: Epilogue;
+        }
+      }
+    }
+  }
+
+  section {
+
+    .img {
+      width: 100vw;
+      height: 100vh;
+      background-image: url(../images/image-hero-mobile.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 10vh 0 0 26vw;
+    }
+  
+    article { 
+    
+      h1 {
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: 2.2em;
+        text-align: center;
+        margin: 1em 0 .5em 0;
+      }
+    
+      p {
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: 1em;
+        line-height: 1.3em;
+        text-align: center;
+        padding: 0 5em;
+        color: gray;
+      }
+    
+      button {
+        display: block;
+        width: 30%;
+        height: 3.2em;
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: 1em;
+        padding: 0 .5em;
+        border-radius: 20px;
+        color: white;
+        background-color: black;
+        margin: 1.5em auto;
+      }
+
+      .link--client {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+  }
+
+  footer {
+    margin: auto;
+  
+    .attribution {
+      font-family: Epilogue;
+      margin: 1em .3em;
+      line-height: 1.3em;
+      text-align: center;
+    }
+  
+    .attribution > a {
+      color: green;
+      text-decoration: none;
+    }
+  }
+}
+
+@include devices(tablet) {
+  body {
+    display: grid;
+    height: auto;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh auto 10vh; 
+    grid-template-areas: 
+    "header"
+    "section"
+    "footer";
+    overflow-x: hidden;
+    transition: all .3s ease;
+
+    &.on {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  
+    header {
+      grid-area: header;
+    }
+    
+    main > section {
+      grid-area: section;
+    }
+    
+    footer {
+      grid-area: footer;
+    }
+  }
+
+  header {
+  
+    .nav__mobile {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      svg {
+        margin: 1.5em 0 0 1em;
+      }
+
+      .btn__burger {
+        margin-right: 1.5em;
+        z-index: 10;
+
+        .hide {
+          display: none;
+          opacity: 0;
+          visibility: hidden;
+          width: 0;
+          height: 0;
+          overflow: hidden;
+        }
+      }
+    }
+      
+    nav {
+      
+      .sidebar {
+        position: absolute;
+        top: 0;
+        left: 100vw;
+        width: 60%;
+        height: 100vh;
+        padding: 5em 0 0 1em;
+        background: whitesmoke;
+        transition: all .5s ease;
+
+        &.close {
+          left: 20em;
+        }
+
+        .nav-links {
+
+          
+
+          .block-menu {
+            margin: 1em 0 2em 2em;
+          }
+
+          li {
+            margin: 1em 0 5em 2em;
+
+            svg:nth-child(2) {
+              margin: 0 0 0 .5em;
+              padding: .2em .5em;
+              translate: all .3s ease;
+            }
+
+            &.showMenu svg.arrow {
+              margin: 0 0 0 .5em;
+              padding: .2em .5em;
+              transform: rotate(180deg);
+            }
+          }
+
+          a {
+            text-decoration: none;
+            color: gray;
+            font-size: 1.5em;
+            font-family: Epilogue;
+          }
+
+          li .sub-menu {
+            display: none;
+            padding: 1em 0 1em 3em;
+
+            li {
+              margin-bottom: 1em;
+
+              svg {
+                padding-right: 1em;
+              }
+
+              a {
+                font-family: Epilogue;
+                color: gray;
+              }
+            }
+          }
+
+          li.showMenu .sub-menu {
+            display: block;
+          }
+        }
+
+        .group__button {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          button {
+            width: 30vw;
+            height: 5vh;
+            font-family: Epilogue;
+            font-size: 1em;
+            border: 2px solid black;
+            border-radius: 10px;
+
+            &:nth-child(1) {
+              border: none;
+            }
+          }
+        }
+
+        .link_name {
+          color: #808080;
+          font-family: Epilogue;
+        }
+      }
+    }
+  }
+
+  section {
+
+    .img {
+      width: 100vw;
+      height: 63vh;
+      background-image: url(../images/image-hero-mobile.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  
+    article { 
+    
+      h1 {
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: 2.5em;
+        text-align: center;
+        margin: 1em 0 1em 0;
+      }
+    
+      p {
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        text-align: center;
+        padding: 0 5em;
+        color: gray;
+      }
+    
+      button {
+        display: block;
+        width: 40%;
+        height: 3.2em;
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: 1.3em;
+        padding: 0 .5em;
+        border-radius: 20px;
+        color: white;
+        background-color: black;
+        margin: 2.2em auto;
+      }
+
+      .link--client {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+  }
+
+  footer {
+    margin: auto;
+  
+    .attribution {
+      font-family: Epilogue;
+      margin: 1em .3em;
+      line-height: 1.3em;
+      text-align: center;
+    }
+  
+    .attribution > a {
+      color: green;
+      text-decoration: none;
+    }
+  }
+}
+
+@include devices(tablet-landscape) {
+  
+  body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh auto auto; 
+    grid-template-areas: 
+    "header"
+    "section"
+    "footer";
+    overflow-x: hidden;
+  
+    header {
+      grid-area: header;
+    }
+    
+    main > section {
+      grid-area: section;
+    }
+    
+    footer {
+      grid-area: footer;
+    }
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    svg {
+      margin: 1.5em 0 0 1em;
+    }
+
+    .btn__burger {
+      display: none;
+    }
+
+    nav {
+
+      .sidebar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: baseline;
+        width: 85vw;
+        height: 6vh;
+
+        .nav-links {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          gap: 3em;
+          
+          .block-menu {
+            display: flex;
+            flex-direction: column;
+
+            label {
+              width: 10vw;
+            }
+          }
+
+          li {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 2em;
+
+            &:nth-child(1) {
+              margin-left: 2em;
+            }
+
+            svg:nth-child(2) {
+              margin: 0 0 0 .5em;
+              padding: .2em .5em;
+              translate: all .3s ease;
+            }
+
+            &.showMenu svg.arrow {
+              margin: 0 0 0 .5em;
+              padding: .2em .5em;
+              transform: rotate(180deg);
+            }
+          }
+
+          a {
+            text-decoration: none;
+            color: gray;
+            font-family: Epilogue;
+          }
+
+          li > .sub-menu {
+            display: none;
+          }
+
+          li.showMenu .sub-menu {
+            display: block;
+            width: 12vw;
+            padding-right: 1em;
+            box-shadow: 0px 12px 15px -7px rgba(0, 0, 0, 0.15);
+            z-index: 10;
+
+            li {
+              display: flex;
+              flex-direction: row;
+              align-items: baseline;
+              margin-left: 0;
+              margin-bottom: .1em;
+
+              svg {
+                padding-right: 1em;
+              }
+
+              a {
+                font-family: Epilogue;
+                color: gray;
+              }
+            }
+
+            &:nth-child(0) {
+              margin: 1em 1em;
+            }
+
+            &.company {
+              width: 5.5em;
+              padding: 1em 1em;
+
+              li {
+                margin-top: 1em;
+              }
+            }
+          }
+        }
+
+        .group__button {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          width: 35vw;
+
+          button {
+            width: 9vw;
+            height: 5vh;
+            font-family: Epilogue;
+            font-size: 1em;
+            border: 2px solid black;
+            border-radius: 10px;
+
+            &:nth-child(2) {
+              transition: background-color .6s, color .6s linear;
+              
+              &:hover {
+                background-color: #000;
+                color: white;
+              }
+            }
+
+
+            &:nth-child(1) {
+              border: none;
+              background-color: white;
+            }
+
+
+          }
+        }
+
+        .link_name {
+          color: #808080;
+          font-family: Epilogue;
+        }
+      }
+    }
+  
+  }
+
+  section {
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;    
+
+    .img {
+      width: 31.3vw;
+      height: 67vh;
+      background-image: url(../images/image-hero-desktop.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0 6em 0 0;
+    }
+  
+    article {
+      width: 40%;
+
+      h1 {
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: 5vw;
+        padding: 0 .7em 0 0;
+        margin: 1em 0 .5em 0;
+      }
+    
+      p {
+        width: 75%;
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: 1.1em;
+        line-height: 1.3em;
+        padding: 0 1em 0 0;
+        color: gray;
+      }
+    
+      button {
+        width: 25%;
+        height: 3.5em;
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: .9em;
+        padding: 0 .5em;
+        border-radius: 15px;
+        color: white;
+        background-color: black;
+        margin: 2em auto 4em auto;
+        transition: background-color .6s, color .6s, border .4s linear; 
+
+        &:hover {
+          background-color:white;
+          color: black;
+          border: 2px solid black;
+        }
+      }
+
+      .link--client {
+        width: 30vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+  }
+
+  footer {
+    margin: auto;
+  
+    .attribution {
+      font-family: Epilogue;
+      margin: .5em .3em;
+      text-align: center;
+    }
+  
+    .attribution > a {
+      color: green;
+      text-decoration: none;
+    }
+  }
+}
+
+@include devices(desktop) {
+
+  body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh auto auto; 
+    grid-template-areas: 
+    "header"
+    "section"
+    "footer";
+    overflow-x: hidden;
+  
+    header {
+      grid-area: header;
+    }
+    
+    main > section {
+      grid-area: section;
+    }
+    
+    footer {
+      grid-area: footer;
+    }
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    svg {
+      margin: 1.5em 0 0 1em;
+    }
+
+    .btn__burger {
+      display: none;
+    }
+
+    nav {
+
+      .sidebar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: baseline;
+        width: 85vw;
+        height: 6vh;
+
+        .nav-links {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          gap: 3em;
+          
+          .block-menu {
+            display: flex;
+            flex-direction: column;
+
+            label {
+              width: 7.5em;
+            }
+          }
+
+          li {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 2em;
+
+            &:nth-child(1) {
+              margin-left: 2em;
+            }
+
+            svg:nth-child(2) {
+              margin: 0 0 0 .5em;
+              padding: .2em .5em;
+              translate: all .3s ease;
+            }
+
+            &.showMenu svg.arrow {
+              margin: 0 0 0 .5em;
+              padding: .2em .5em;
+              transform: rotate(180deg);
+            }
+          }
+
+          a {
+            text-decoration: none;
+            color: gray;
+            font-family: Epilogue;
+          }
+
+          li > .sub-menu {
+            display: none;
+          }
+
+          li.showMenu .sub-menu {
+            display: block;
+            width: 7vw;
+            padding-right: 1em;
+            box-shadow: 0px 12px 15px -7px rgba(0, 0, 0, 0.15);
+            z-index: 10;
+
+            li {
+              display: flex;
+              flex-direction: row;
+              align-items: baseline;
+              margin-left: 0;
+              margin-bottom: .5em;
+
+              svg {
+                padding-right: 1em;
+              }
+
+              a {
+                font-family: Epilogue;
+                color: gray;
+              }
+            }
+
+            &:nth-child(0) {
+              margin: 1em 1em;
+            }
+
+            &.company {
+              width: 5.5em;
+              padding: 1em 1em;
+
+              li {
+                margin-top: 1em;
+              }
+            }
+          }
+        }
+
+        .group__button {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          width: 55vw;
+
+          button {
+            width: 6vw;
+            height: 5vh;
+            font-family: Epilogue;
+            font-size: .8em;
+            border: 2px solid black;
+            border-radius: 15px;
+
+            &:nth-child(2) {
+              transition: background-color .6s, color .6s linear;
+              
+              &:hover {
+                background-color: #000;
+                color: white;
+              }
+            }
+
+
+            &:nth-child(1) {
+              border: none;
+              background-color: white;
+            }
+
+
+          }
+        }
+
+        .link_name {
+          color: #808080;
+          font-family: Epilogue;
+        }
+      }
+    }
+  
+  }
+
+  section {
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;    
+
+    .img {
+      width: 28%;
+      height: 77vh;
+      background-image: url(../images/image-hero-desktop.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0 6em 0 0;
+    }
+  
+    article {
+      width: 40%;
+
+      h1 {
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: 5vw;
+        padding: 0 .7em 0 0;
+        margin: 1em 0 .5em 0;
+      }
+    
+      p {
+        width: 75%;
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: 1.1em;
+        line-height: 1.3em;
+        padding: 0 1em 0 0;
+        color: gray;
+      }
+    
+      button {
+        width: 20%;
+        height: 3.5em;
+        font-family: Epilogue;
+        font-weight: 900;
+        font-size: .9em;
+        padding: 0 .5em;
+        border-radius: 15px;
+        color: white;
+        background-color: black;
+        margin: 4em auto 8em auto;
+        transition: background-color .6s, color .6s, border .4s linear; 
+
+        &:hover {
+          background-color:white;
+          color: black;
+          border: 2px solid black;
+        }
+      }
+
+      .link--client {
+        width: 30vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+  }
+
+  footer {
+    margin: auto;
+  
+    .attribution {
+      font-family: Epilogue;
+      margin: 1em .3em;
+      text-align: center;
+    }
+  
+    .attribution > a {
+      color: green;
+      text-decoration: none;
+    }
+  }
+}
