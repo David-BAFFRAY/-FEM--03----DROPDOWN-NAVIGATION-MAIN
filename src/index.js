@@ -2,6 +2,6 @@
 
 import './scss/main.scss';
 
-/* JS MODULE */
+/* JS */
 
 import './js/app';

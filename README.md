@@ -35,6 +35,16 @@ Users should be able to:
 
 ## My process
 
+To be able to launch the page in localhost, you have to run the command in the terminal 
+
+``npm install``
+
+and then use 
+
+``npm run dev``
+
+and use the 'localhost://1234' provided by parcel.
+
 ### Built with
 
 - Semantic HTML5 markup
